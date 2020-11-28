@@ -6,21 +6,21 @@ from tempfile import NamedTemporaryFile
 from InvoiceGenerator.api import Invoice, Item, Client, Provider, Creator
 
 from InvoiceGenerator.pdf import SimpleInvoice
-
+import urllib
 
 
 import base64
 
+urllib.request.urlretrieve("https://lh3.googleusercontent.com/W5-2w5v3ET_0xh40zJUDkL2Gd7Ls66yh1-rs12UMW4EZPaEyofl_Ix_NrxeybNJ1LNnRZxw=s93", "logo.png")
 
-
-#os.chdir(r'C:\Users\MOHAMMED MUZZAMMIL\Desktop\Invoice')
+os.chdir(r'C:\Users\MOHAMMED MUZZAMMIL\Desktop\Invoice')
 
 def ganjakhet():
     # choose english as language
     os.environ["INVOICE_LANG"] = "en"
 
     client = Client('Bombay Coldrinks')
-    provider = Provider('Bombay Softdrinks Private Ltd', bank_account='2600420569', bank_code='2010')
+    provider = Provider('Bombay Softdrinks Private Ltd', bank_account='2600420569', bank_code='2010',logo_filename='logo.png')
     creator = Creator('Bombay Softdrinks')
 
     invoice = Invoice(client, provider, creator)
