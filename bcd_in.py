@@ -20,7 +20,7 @@ def ganjakhet():
     os.environ["INVOICE_LANG"] = "en"
 
     client = Client('Bombay Coldrinks')
-    provider = Provider('Bombay Softdrinks Private Ltd', bank_account='2600420569', bank_code='2010',logo_filename='logo.png')
+    provider = Provider('Bombay Softdrinks Private Ltd', bank_account='2600420569', bank_code='2010')
     creator = Creator('Bombay Softdrinks')
 
     invoice = Invoice(client, provider, creator)
