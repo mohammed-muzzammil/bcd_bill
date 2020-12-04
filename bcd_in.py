@@ -13,7 +13,7 @@ import base64
 
 urllib.request.urlretrieve("https://lh3.googleusercontent.com/W5-2w5v3ET_0xh40zJUDkL2Gd7Ls66yh1-rs12UMW4EZPaEyofl_Ix_NrxeybNJ1LNnRZxw=s93", "logo.png")
 
-#os.chdir(r'C:\Users\MOHAMMED MUZZAMMIL\Desktop\Invoice')
+os.chdir(r'C:\Users\MOHAMMED MUZZAMMIL\Desktop\Invoice')
 
 def ganjakhet():
     # choose english as language
@@ -207,9 +207,9 @@ def ga_bill(invoice,dictionary):
         elif i == 'Soda 300 ml':
             invoice.add_item(Item(j, 171, description=i))
         elif i == 'Old-Crates-600-ml':
-            invoice.add_item(Item(j,-120, description=i))    
+            invoice.add_item(Item(j,-150, description=i))    
         elif i == 'Old-Crates-300-ml':
-            invoice.add_item(Item(j,-96, description=i))
+            invoice.add_item(Item(j,-104, description=i))
             
 
             
