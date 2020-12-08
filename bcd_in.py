@@ -137,13 +137,16 @@ with title:
               ,'Awla Zeera 300 ml','Pudina 600 ml','Pudina 300 ml',
               'Fresh Lime 600 ml','Fresh Lime 300 ml','Ice Cream 600 ml'
               ,'Ice Cream 300 ml','Soda 600 ml','Soda 300 ml','Kashmiri Soda 600 ml','Kashmiri Soda 300 ml','Old-Crates-600-ml',
-             'Old-Crates-300-ml')
+             'Old-Crates-300-ml','Nimbu Bottle','Extra Masala','Extra Nimbu','New-Crates-600-ml','New-Crates-300-ml',
+              'Nimbu Soda 600 ml','Nimbu Soda 300 ml')
     fl=st.selectbox('Choose',flavours)
 
     
 with qt:
+    
     options=(1,2,3,4,5,6,7,8,9,10)
     qut=st.selectbox('Quantity',options)
+    
     
     
 with br:
@@ -179,37 +182,39 @@ def parse(d):
 def ga_bill(invoice,dictionary):
     for i,j in dictionary.items():
         if i == 'Orange 600 ml':
-            invoice.add_item(Item(j, 290, description=i))
+            invoice.add_item(Item(j, 170, description=i))
         elif i == 'Rooh afza 600 ml':
-            invoice.add_item(Item(j, 370, description=i))
+            invoice.add_item(Item(j, 250, description=i))
         elif i == 'Pudina 600 ml':
-            invoice.add_item(Item(j, 310, description=i))
+            invoice.add_item(Item(j, 190, description=i))
         elif i == 'Awla Zeera 600 ml':
-            invoice.add_item(Item(j, 310, description=i))
+            invoice.add_item(Item(j, 190, description=i))
         elif i == 'Fresh Lime 600 ml':
-            invoice.add_item(Item(j, 290, description=i))
+            invoice.add_item(Item(j, 170, description=i))
         elif i == 'Ice Cream 600 ml':
-            invoice.add_item(Item(j, 290, description=i))
+            invoice.add_item(Item(j, 170, description=i))
         elif i == 'Orange 300 ml':
-            invoice.add_item(Item(j, 206, description=i))
+            invoice.add_item(Item(j, 110, description=i))
         elif i== 'Rooh afza 300 ml':
-            invoice.add_item(Item(j, 231, description=i))
+            invoice.add_item(Item(j, 135, description=i))
         elif i == 'Awla Zeera 300 ml':
-            invoice.add_item(Item(j, 221, description=i))
+            invoice.add_item(Item(j, 125, description=i))
         elif i == 'Pudina 300 ml':
-            invoice.add_item(Item(j, 221, description=i))
+            invoice.add_item(Item(j, 125, description=i))
         elif i == 'Fresh Lime 300 ml':
-            invoice.add_item(Item(j, 206, description=i))
+            invoice.add_item(Item(j, 110, description=i))
         elif i == 'Ice Cream 300 ml':
-            invoice.add_item(Item(j, 206, description=i))
+            invoice.add_item(Item(j, 110, description=i))
         elif i == 'Soda 600 ml':
-            invoice.add_item(Item(j, 230, description=i))
+            invoice.add_item(Item(j, 110, description=i))
         elif i == 'Soda 300 ml':
-            invoice.add_item(Item(j, 171, description=i))
-        elif i == 'Old-Crates-600-ml':
-            invoice.add_item(Item(j,-150, description=i))    
-        elif i == 'Old-Crates-300-ml':
-            invoice.add_item(Item(j,-104, description=i))
+            invoice.add_item(Item(j, 75, description=i))
+        elif i == 'New-Crates-600-ml':
+            invoice.add_item(Item(j,150,description=i))
+        elif i == 'New-Crates-300-ml':
+            invoice.add_item(Item(j,105,description=i))
+            
+        
             
 
             
@@ -253,6 +258,23 @@ def c_bill(invoice,dictionary):
             invoice.add_item(Item(j,-120, description=i))    
         elif i == 'Old-Crates-300-ml':
             invoice.add_item(Item(j,-96, description=i))
+        elif i == 'Nimbu Bottle':
+            invoice.add_item(Item(j,5,description=i))
+        elif i == 'Extra Masala':
+            invoice.add_item(Item(j,200,description=i+'250 gm'))
+        elif i == 'New-Crates-600-ml':
+            invoice.add_item(Item(j,150,description=i))
+        elif i == 'New-Crates-300-ml':
+            invoice.add_item(Item(j,105,description=i))
+        elif i == 'Extra Nimbu':
+            invoice.add_item(Item(j,75,description=i))
+        elif i == 'Nimbu Soda 600 ml':
+            invoice.add_item(Item(j,480,description=i))
+        elif i == 'Nimbu Soda 300 ml':
+            invoice.add_item(Item(j,300,description=i))
+            
+            
+            
                 
                 
     return
