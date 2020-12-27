@@ -11,7 +11,7 @@ import urllib
 
 import base64
 
-urllib.request.urlretrieve("https://lh3.googleusercontent.com/FfqDALFx0CwDaeVdH_IoZGTYFExWAkUuBxsuNZsMzA-HjwNpptUiMRBYB-LFV7phiE66=s93", "logo.png")
+urllib.request.urlretrieve("https://drive.google.com/u/0/uc?id=1xpK-TvWmR0ZaBrsmJAyYgvntNmffC4oc&export=download", "logo.png")
 
 #os.chdir(r'C:\Users\MOHAMMED MUZZAMMIL\Desktop\Invoice')
 
